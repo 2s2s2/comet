@@ -1,0 +1,177 @@
+body, h1, h2, h3, h4, p, ol, ul, li {
+	margin: 0;
+	font-family: "Helvetica"
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	min-height: 100vh;
+	background: linear-gradient(-30deg, #312142, #111123)
+}
+
+.comet{
+	position: absolute;
+	width: 220px;
+	height: 450px;
+	top: 0;
+	left: 300px;
+}
+
+.comet__tail{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: linear-gradient(#32527a ,#72b1fd, #72b1fd)
+}
+
+.comet__body{
+	position: absolute;
+	background-color: #72b1fd;
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	bottom: -110px;
+}
+
+.shining{
+	position: absolute;
+	width: 280px;
+	height: 280px;
+	left: -30px;
+	top: -30px;
+	border-radius: 50%;	
+	background-color: rgb(154, 30, 143, 0.25);
+}
+
+.shining__particle{
+	position: absolute;
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+
+.shining__particle.-s{
+	top: 100px;
+	left: 20px;
+	width: 8px;
+	height: 8px;
+	animation: shining .2s infinite;
+}
+
+.shining__particle.-m{
+	top: 50px;
+	width: 12px;
+	height: 12px;
+	animation: shining .2s infinite;
+}
+
+.shining__particle.-l{
+	width: 15px;
+	height: 15px;
+	animation: shining .2s infinite;
+}
+
+.core{
+	position: absolute;
+	height: 190px;
+	width: 190px;
+	top: 15px;
+	left: 15px;
+	border-radius: 50%;
+	background-color: #991e8e;
+}
+
+.core__tail{
+	position: absolute;
+	min-height: 300px;
+	bottom: 130px;
+}
+
+.core__tail::before{
+	display: block;
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+}
+
+.core__tail:first-child{
+	left: 10px;
+	min-height: 200px;
+}
+
+.core__tail:nth-child(2){
+	left: 40px;
+	min-height: 100px;
+}
+
+.core__tail:nth-child(3){
+	left: 57px;
+	min-height: 300px;
+}
+
+.core__tail:nth-child(4){
+	left: 87px;
+	min-height: 150px;
+}
+
+.core__tail:nth-child(5){
+	left: 104px;
+	min-height: 100px;
+}
+
+.core__tail:nth-child(6){
+	left: 134px;
+	min-height: 150px;
+}
+
+.core__tail:nth-child(7){
+	left: 151px;
+	min-height: 250px;
+}
+
+.core__tail.-red{
+	width: 30px;
+	background-color: #991e8e;
+}
+
+.core__tail.-red::before{
+	height: 30px;
+	width: 30px;
+	background-color: #991e8e;
+	top: -20px;	
+}
+
+.core__tail.-blue{
+	width: 17px;
+	background-color: #72b1fd;
+	right: 0;
+}
+
+.core__tail.-blue::before{
+	bottom: -10px;	
+	height: 17px;
+	width: 17px;
+	background-color: #72b1fd;
+}
+
+@keyframes shining{
+	0%{
+		opacity: .4;
+	}
+
+	50%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: .4;
+	}
+}
